@@ -9,5 +9,4 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   title = 'Hello World';
   name = 'Angular test';
-  apiUrl = environment.apiUrl;
 }

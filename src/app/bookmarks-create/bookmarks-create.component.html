@@ -1,0 +1,43 @@
+<div class="card" style="min-width: 60%;">
+    <div class="card-header">Kreiranje bookmarka</div>
+
+    <div class="card-body">
+        <form #bookmarksCreateForm="ngForm" (ngSubmit)="onSubmit()" >
+                        
+            <input type="hidden" name="_token" value="MIfcOWZlNBXMWrPfli17jqy6XAh1FNFBxw9TKvcd">
+            <div class="form-group row label-floating ">
+                <label class="col-sm-3 control-label"> Naziv: </label>
+                <div class="col-sm-9">
+                    <input type="name" name="name" required="" class="form-control" [(ngModel)]="bookmarkModel.name">
+                </div>
+            </div>
+
+            <div class="form-group row label-floating ">
+                <label class="col-sm-3 control-label"> URL: </label>
+                <div class="col-sm-9">
+                    <input type="text" name="url" class="form-control" required="" [(ngModel)]="bookmarkModel.url">
+                </div>
+            </div>
+            <div class="form-group row label-floating ">
+                <label class="col-sm-3 control-label"> Opis: </label>
+                <div class="col-sm-9">
+                    <textarea name="description" class="form-control" [(ngModel)]="bookmarkModel.description">
+                    </textarea>
+                </div>
+            </div>
+            <div class="form-group row label-floating ">
+                <label class="col-sm-3 control-label"> Poredak: </label>
+                <div class="col-sm-9">
+                    <input type="number" name="sort_order" min="1" class="form-control" required="" [(ngModel)]="bookmarkModel.sort_order">
+                </div>
+            </div>
+            <div class="form-group row mb-0">
+                <div class="col-sm-6 offset-sm-3">
+                    <button type="submit" class="btn btn-primary">
+                        Prihvati
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

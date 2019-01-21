@@ -59,7 +59,7 @@
           "options": {
             "browserTarget": "angular-project:build",
             "host": "192.168.0.222",
-            "port": 4200
+            "port": 80
           },
           "configurations": {
             "production": {
