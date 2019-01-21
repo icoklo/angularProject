@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { BookmarksShowComponent } from './bookmarks-show/bookmarks-show.component';
 import { BookmarksCreateComponent } from './bookmarks-create/bookmarks-create.component';
 import { FormsModule } from '@angular/forms';
+import { BookmarksService } from './bookmarks.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ BookmarksService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

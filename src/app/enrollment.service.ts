@@ -8,10 +8,10 @@ import { environment } from 'src/environments/environment';
 })
 export class EnrollmentService {
 
-    _url = environment.apiUrl + '/bookmarks/store'
-  constructor(private _http: HttpClient) { }
+    url = environment.apiUrl + '/bookmarks/store'
+  constructor(private http: HttpClient) { }
 
   enroll(bookmark: Bookmark) {
-      return this._http.post<any>(this._url, bookmark);
+      return this.http.post<any>(this.url, bookmark);
   }
 }
