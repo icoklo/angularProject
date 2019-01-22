@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class BookmarksCreateComponent implements OnInit {
 
-    bookmarkModel = new Bookmark('temp-mail', 'https://temp-mail.org/', 'opis', 1);
+    bookmarkModel = new Bookmark('', 'https://temp-mail.org/', '', 1);
     constructor(private bookmarkService: BookmarksService, private router: Router) { }
 
     ngOnInit() {

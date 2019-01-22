@@ -28,12 +28,12 @@ export class BookmarksService {
         return this.http.get<Bookmark>(this.url);
     }
 
-    updateBookmark(id, bookmark) {
+    updateBookmark(id: number, bookmark: Bookmark) {
         this.url = environment.apiUrl + '/bookmarks/edit/' + id;
         return this.http.put(this.url, bookmark);
     }
 
-    deleteBookmark(id) {
+    deleteBookmark(id: number) {
         this.url = environment.apiUrl + '/bookmarks/delete/' + id;
         return this.http.delete(this.url);
     }

@@ -1,39 +1,45 @@
-<div class="card">
-    <div class="card-header">Pregled bookmarka</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">Pregled bookmarka</div>
 
-    <div class="card-body">
-        <div class="form-group row mb-0">
-            <div class="col-sm-6 offset-sm-4" style="margin-bottom: 20px">
-                <a href="" class="btn btn-primary" style="float:right;">
-                    Dodaj novi zapis
-                </a>
+                <div class="card-body">
+                    <div class="form-group row mb-0">
+                        <div class="col-sm-6 offset-sm-4" style="margin-bottom: 20px">
+                            <a routerLink="/bookmarks/create" class="btn btn-primary" style="float:right;">
+                                Dodaj novi zapis
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Redni broj</th>
+                                    <th scope="col">Naziv</th>
+                                    <th scope="col">Opis</th>
+                                    <th scope="col" colspan="2"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let bookmark of bookmarks">
+                                    <td> {{ bookmark.id }} </td>
+                                    <td> {{ bookmark.name }} </td>
+                                    <td> {{ bookmark.description }} </td>
+                                    <td>
+                                        <a [routerLink]="['/bookmarks/edit', bookmark.id]"> Uredi </a>
+                                    </td>
+                                    <td>
+                                        <a routerLink="" (click)="deleteBookmark(bookmark.id)"> Obrisi </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="form-group">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Redni broj</th>
-                        <th scope="col">Naziv</th>
-                        <th scope="col">Opis</th>
-                        <th scope="col" colspan="2"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let bookmark of bookmarks">
-                        <td> {{ bookmark.id }} </td>
-                        <td> {{ bookmark.name }} </td>
-                        <td> {{ bookmark.description }} </td>
-                        <td> 
-                            <a [routerLink]="['/bookmarks/edit', bookmark.id]"> Uredi </a>  
-                        </td>
-                        <td> 
-                            <a routerLink="" (click)="deleteBookmark(bookmark.id)"> Obrisi </a>  
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 </div>
