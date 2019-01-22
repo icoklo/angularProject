@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Bookmark } from '../bookmark';
-import { EnrollmentService } from '../enrollment.service';
 import { BookmarksService } from '../bookmarks.service';
 import { Router } from '@angular/router';
 
