@@ -25,8 +25,12 @@
                         <td> {{ bookmark.id }} </td>
                         <td> {{ bookmark.name }} </td>
                         <td> {{ bookmark.description }} </td>
-                        <td> Uredi </td>
-                        <td> Obriši </td>
+                        <td> 
+                            <a [routerLink]="['/bookmarks/edit', bookmark.id]"> Uredi </a>  
+                        </td>
+                        <td> 
+                            <a routerLink="" (click)="deleteBookmark(bookmark.id)"> Obrisi </a>  
+                        </td>
                     </tr>
                 </tbody>
             </table>

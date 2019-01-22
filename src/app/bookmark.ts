@@ -4,5 +4,5 @@ export class Bookmark {
         public url: string,
         public description: string,
         public sort_order: number
-    ) {}
+    ) { }
 }

@@ -9,6 +9,7 @@ import { BookmarksShowComponent } from './bookmarks-show/bookmarks-show.componen
 import { BookmarksCreateComponent } from './bookmarks-create/bookmarks-create.component';
 import { FormsModule } from '@angular/forms';
 import { BookmarksService } from './bookmarks.service';
+import { BookmarksEditComponent } from './bookmarks-edit/bookmarks-edit.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { BookmarksService } from './bookmarks.service';
     RegisterComponent,
     BookmarksShowComponent,
     BookmarksCreateComponent,
+    BookmarksEditComponent,
   ],
   imports: [
     BrowserModule,
