@@ -18,7 +18,7 @@ export class BookmarksShowComponent implements OnInit {
     }
 
     deleteBookmark(id) {
-        alert("Brisem");
+        //alert("Brisem");
 
         this.bookmarksService.deleteBookmark(id)
             .subscribe(

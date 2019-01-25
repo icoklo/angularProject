@@ -24,7 +24,7 @@ export class BookmarksEditComponent implements OnInit {
     }
 
     onSubmit() {
-        alert("Submit");
+        //alert("Submit");
 
         this.bookmarkService.updateBookmark(this.route.snapshot.params['id'], this.bookmarkModel)
             .subscribe(

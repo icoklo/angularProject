@@ -17,7 +17,7 @@ export class BookmarksCreateComponent implements OnInit {
     }
 
     onSubmit() {
-        alert("Submit");
+        //alert("Submit");
 
         this.bookmarkService.storeBookmark(this.bookmarkModel)
             .subscribe(
