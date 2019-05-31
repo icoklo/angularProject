@@ -5,15 +5,13 @@
                 <div class="card-header">Prijava</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ apiUrl }}/login">
+                    <form method="POST" (ngSubmit)="onSubmit()" ngNativeValidate>
                         
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-mail:</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="" required=""
-                                    autofocus="">
-
+                                <input [(ngModel)]="email" type="email" class="form-control" name="email" value="" required autofocus="">
                             </div>
                         </div>
 
@@ -21,8 +19,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">Lozinka:</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required="">
-
+                                <input [(ngModel)]="password" type="password" class="form-control" name="password" required="">
                             </div>
                         </div>
 

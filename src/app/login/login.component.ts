@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +9,30 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginComponent implements OnInit {
 
-    public apiUrl = environment.apiUrl;
-
-    constructor() { }
+    email = '';
+    password = '';
+    constructor(private authService: AuthService, private router: Router) { }
 
     ngOnInit() {
     }
 
-    
+    onSubmit() {
 
+        this.authService.login(this.email, this.password)
+            .subscribe(   
+                data => {
+                    console.log('Success!', data);
+                    if(data.status == 'success')
+                    {
+                        alert(data.message);
+                        this.router.navigate(['/bookmarks/show']);
+                    }
+                    else 
+                    {
+                        alert(data.message);
+                    }
+                },
+                error => console.log('Error!', error),
+            );
+    }
 }
